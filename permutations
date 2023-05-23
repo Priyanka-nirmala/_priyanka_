@@ -1,0 +1,12 @@
+class Solution:
+    def find_permutation(self, S):
+        from itertools import permutations
+        p=permutations(S)
+        m=set()
+        for i in list(p):
+           x=list(i)
+           s=''
+           for j in x:
+               s=s+j
+           m.add(s)
+        return sorted(m)
